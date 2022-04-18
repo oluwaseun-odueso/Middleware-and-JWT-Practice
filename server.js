@@ -13,7 +13,7 @@ app.post('/secured', (req, res) => {
     const decoded = jwt.verify("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo1fSwiaWF0IjoxNjUwMzE2NjI5fQ._B8NEEiNWf3f9zNqfO9tRQm0TKwGzWQz_BzONSR-bOE", 'secret-key')
     res.send({
         string: 'this is secured',
-        data : data
+        data : decoded
     })
 });
 
